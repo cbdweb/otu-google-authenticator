@@ -2,9 +2,9 @@
 Contributors: Henrik.Schack
 Donate Link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=henrik%40schack%2edk&lc=US&item_name=Google%20Authenticator&item_number=Google%20Authenticator&no_shipping=0&no_note=1&tax=0&bn=PP%2dDonationsBF&charset=UTF%2d8
 Tags: authentication,otp,password,security,login,android,iphone,blackberry
-Requires at least: 3.5
-Tested up to: 3.5
-Stable tag: 0.44
+Requires at least: 3.8
+Tested up to: 3.8
+Stable tag: 0.46
 
 Google Authenticator for your WordPress blog.
 
@@ -29,10 +29,6 @@ You may also want to write down the secret on a piece of paper and store it in a
 6. That's it, your WordPress blog is now a little more secure.
 
 == Frequently Asked Questions ==
-
-= The iPhone app keeps telling me I'm trying to scan an authentication token barcode that isn't valid, what to do ? =
-
-Apparently the iPhone app won't accept a barcode containing space characters in the description, removing space characters in the description should fix the problem.
 
 = Can I use Google Authenticator for WordPress with the Android/iPhone apps for WordPress? =
 
@@ -60,7 +56,7 @@ If you have SSH or FTP access to your webhosting account, you can manually delet
 just delete the wp-content/plugins/google-authenticator directory, and you'll be able to login using username/password again.
 
 = I don't own a Smartphone, isn't there another way to generate these secret codes ? =
-Yes, there is a Chrome browser extension you can use : http://4bits.dk/Uwg09z
+Yes, there is a webbased version here : http://gauth.apps.gbraad.nl/ Github project here : https://github.com/gbraad/html5-google-authenticator
 
 
 == Screenshots ==
@@ -71,6 +67,20 @@ Yes, there is a Chrome browser extension you can use : http://4bits.dk/Uwg09z
 4. Google Authenticator app on Android
 
 == Changelog ==
+
+= 0.46 =
+* Man-in-the-middle attack protection added.
+* Show warning before displaying the QR code.
+* FAQ updated.
+
+= 0.45 =
+* Spaces in the description field should now work on iPhones.
+* Some depricated function calls replaced.
+* Code inputfield easier to use for .jp users now.
+* Sanitize description field input.
+* App password hash function switched to one that doesn't have rainbow tables available.
+* PHP notices occurring during app password login removed.
+
 
 = 0.44 =
 * Installation/FAQ section updated.
@@ -116,6 +126,7 @@ Yes, there is a Chrome browser extension you can use : http://4bits.dk/Uwg09z
 = 0.20 =
 * Initial release
 
+
 == Credits ==
 
 Thanks to:
@@ -130,4 +141,6 @@ Thanks to:
 
 [Aldo Latino](http://profiles.wordpress.org/users/aldolat/) for his Italian translation.
 
-[Kaijia Feng](http://www.kaijia.me/) for his Simplified Chinese translation. 
+[Kaijia Feng](http://www.kaijia.me/) for his Simplified Chinese translation.
+
+[Alex Concha](http://www.buayacorp.com/) for his security tips.
