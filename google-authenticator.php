@@ -165,7 +165,7 @@ function add_qrcode_script() {
  */
 function loginform() {
     echo "\t<p>\n";
-    echo "\t\t(<b>OTU members note:</b> this is the Admin login form. Please go to <a href=\"/sign-in-to-otu-website/\">member login</a> and login from there.)<br />\n";
+    echo "\t\t(<b>OTU members note:</b> this is the Admin login form. Please go to <a href=\"/sign-in-to-otu-website/\">member login</a>.)<br />\n";
     echo "\t\t<label title=\"".__('If you don\'t have Google Authenticator enabled for your WordPress account, leave this field empty.','google-authenticator')."\">".__('Google Authenticator code','google-authenticator')."<span id=\"google-auth-info\"></span><br />\n";
     echo "\t\t<input type=\"text\" name=\"googleotp\" id=\"user_email\" class=\"input\" value=\"\" size=\"20\" style=\"ime-mode: inactive;\" /></label>\n";
     echo "\t</p>\n";
