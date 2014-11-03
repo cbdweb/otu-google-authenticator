@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: Google Authenticator
+Plugin Name: OTU Google Authenticator
 Plugin URI: http://henrik.schack.dk/google-authenticator-for-wordpress
 Description: Two-Factor Authentication for WordPress using the Android/iPhone/Blackberry app as One Time Password generator.
 Author: Henrik Schack
