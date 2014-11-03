@@ -4,7 +4,7 @@ Plugin Name: Google Authenticator
 Plugin URI: http://henrik.schack.dk/google-authenticator-for-wordpress
 Description: Two-Factor Authentication for WordPress using the Android/iPhone/Blackberry app as One Time Password generator.
 Author: Henrik Schack
-Version: 0.47
+Version: modified in github:cbdweb/google-authenticator-1
 Author URI: http://henrik.schack.dk/
 Compatibility: WordPress 3.8
 Text Domain: google-authenticator
@@ -13,7 +13,7 @@ Domain Path: /lang
 ----------------------------------------------------------------------------
 
 	Thanks to Bryan Ruiz for his Base32 encode/decode class, found at php.net.
-	Thanks to Tobias Bäthge for his major code rewrite and German translation.
+	Thanks to Tobias Bï¿½thge for his major code rewrite and German translation.
 	Thanks to Pascal de Bruijn for his relaxed mode idea.
 	Thanks to Daniel Werl for his usability tips.
 	Thanks to Dion Hulse for his bugfixes.
@@ -22,7 +22,7 @@ Domain Path: /lang
 	Thanks to Ian Dunn for fixing some depricated function calls.
 	Thanks to Kimmo Suominen for fixing the iPhone description issue.
 	Thanks to Alex Concha for some security tips.
-	Thanks to Sébastien Prunier for his Spanish and French translations.
+	Thanks to Sï¿½bastien Prunier for his Spanish and French translations.
 
 ----------------------------------------------------------------------------
 
@@ -93,7 +93,7 @@ function verify( $secretkey, $thistry, $relaxedmode, $lasttimeslot ) {
 	}
 
 	// If user is running in relaxed mode, we allow more time drifting
-	// ±4 min, as opposed to ± 30 seconds in normal mode.
+	// ï¿½4 min, as opposed to ï¿½ 30 seconds in normal mode.
 	if ( $relaxedmode == 'enabled' ) {
 		$firstcount = -8;
 		$lastcount  =  8; 
@@ -166,6 +166,7 @@ function add_qrcode_script() {
 function loginform() {
     echo "\t<p>\n";
     echo "\t\t<label title=\"".__('If you don\'t have Google Authenticator enabled for your WordPress account, leave this field empty.','google-authenticator')."\">".__('Google Authenticator code','google-authenticator')."<span id=\"google-auth-info\"></span><br />\n";
+    echo "\t\t(admin use only)<br\>";
     echo "\t\t<input type=\"text\" name=\"googleotp\" id=\"user_email\" class=\"input\" value=\"\" size=\"20\" style=\"ime-mode: inactive;\" /></label>\n";
     echo "\t</p>\n";
 }
